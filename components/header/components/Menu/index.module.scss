@@ -1,0 +1,49 @@
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menuButton {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.menuIcon {
+  position: relative;
+  width: 38px;
+  height: 17px;
+
+  @media (max-width: 1440px) {
+    width: 32px;
+    height: 14px;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 188px;
+  height: 31px;
+
+  @media (max-width: 1440px) {
+    width: 156px;
+    height: 25px;
+  }
+
+  @media (max-width: 360px) {
+    width: 130px;
+    height: 21px;
+  }
+}
+
+.phoneMenu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
