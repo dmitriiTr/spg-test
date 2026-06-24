@@ -1,0 +1,35 @@
+.button {
+  cursor: pointer;
+  border: none;
+  height: 100%;
+  padding: 15px 20px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &:hover {
+    .innerText {
+      transform: translateY(-100%);
+    }
+  }
+
+  &.primary {
+    color: white;
+    background-color: var(--secondary);
+  }
+
+  &.text {
+    color: var(--secondary);
+    background-color: transparent;
+  }
+}
+
+.textContainer {
+  height: 13px;
+  overflow: hidden;
+}
+
+.innerText {
+  transition: transform 0.3s ease;
+  height: 13px;
+  line-height: 13px;
+}

@@ -3,6 +3,7 @@
   justify-content: space-between;
   flex: 1;
   height: 43px;
+  align-items: center;
 }
 
 .headerActions {
@@ -15,41 +16,6 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-}
-
-.selectButton {
-  cursor: pointer;
-  color: white;
-  background-color: var(--secondary);
-  border: none;
-  height: 100%;
-  padding: 15px 20px;
-  border-radius: 20px;
-  overflow: hidden;
-
-  &:hover {
-    .text {
-      transform: translateY(-100%);
-    }
-  }
-}
-
-.textContainer {
-  height: 13px;
-  overflow: hidden;
-}
-
-.text {
-  transition: transform 0.3s ease;
-  height: 13px;
-  line-height: 13px;
-}
-
-.phoneButton {
-  color: var(--secondary);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
 }
 
 .menuIcon {
