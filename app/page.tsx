@@ -1,12 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Header from "@/components/header";
+import FirstHouse from "@/public/firstHouse.png";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>
+        <div className={styles.firstImage}>
+          <Image src={FirstHouse} fill alt="first" />
+        </div>
         <Image
           className={styles.logo}
           src="/next.svg"
