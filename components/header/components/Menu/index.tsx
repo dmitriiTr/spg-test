@@ -2,7 +2,7 @@ import Image from "next/image";
 import MenuIcon from "@/public/menu.svg";
 import LogoIcon from "@/public/logo1.svg";
 import styles from "./index.module.scss";
-import Button from "@/components/button";
+import Button from "@/components/ui/button";
 
 export default function Menu() {
   return (

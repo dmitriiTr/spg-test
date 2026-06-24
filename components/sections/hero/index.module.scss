@@ -1,0 +1,67 @@
+.heroImage {
+  position: relative;
+  height: 600px;
+
+  width: 100%;
+  img {
+    object-fit: none;
+    object-position: left 38%;
+  }
+
+  @media (max-width: 1440px) {
+    height: 506px;
+    img {
+      object-fit: none;
+      object-position: right 44%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: 411px;
+    img {
+      object-fit: cover;
+      object-position: right 37%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 488px;
+
+    img {
+      object-fit: cover;
+      object-position: 50% top;
+    }
+  }
+
+  @media (max-width: 360px) {
+    height: 313px;
+  }
+}
+
+.pageContent {
+  padding: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  width: 188px;
+  height: 31px;
+
+  @media (max-width: 1440px) {
+    width: 717px;
+    height: 114px;
+  }
+
+  @media (max-width: 360px) {
+    width: 130px;
+    height: 21px;
+  }
+}
+
+.textContainer {
+  align-content: end;
+  color: var(--secondary);
+  font-size: 31px;
+}
