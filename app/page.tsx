@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.scss";
 import Header from "@/components/header";
 import FirstHouse from "@/public/firstHouse.png";
+import BigLogoIcon from "@/public/logo2.svg";
 
 export default function Home() {
   return (
@@ -10,6 +11,15 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.firstImage}>
           <Image src={FirstHouse} fill alt="first" />
+        </div>
+        <div className={styles.pageContent}>
+          <div className={styles.textContainer}>
+            <p>ДОМ БИЗНЕС-КЛАССА</p>
+            <p>ДЛЯ ЦЕНИТЕЛЕЙ РОСКОШИ</p>
+          </div>
+          <div className={styles.logo}>
+            <Image src={BigLogoIcon} fill priority alt={"Logo"} />
+          </div>
         </div>
         <Image
           className={styles.logo}

@@ -11,16 +11,21 @@ export default function Menu() {
           <div className={styles.menuIcon}>
             <Image src={MenuIcon} fill priority alt={"Menu"} />
           </div>
-          <span>Меню</span>
+          <span>МЕНЮ</span>
         </div>
-        <button className={styles.selectButton}>Выбрать квартиру</button>
+        <button className={styles.selectButton}>
+          <div className={styles.textContainer}>
+            <p className={styles.text}>ВЫБРАТЬ КВАРТИРУ</p>
+            <p className={styles.text}>ВЫБРАТЬ КВАРТИРУ</p>
+          </div>
+        </button>
       </div>
       <div className={styles.logo}>
         <Image src={LogoIcon} fill priority alt={"Logo"} />
       </div>
       <div className={styles.phoneMenu}>
         <span>+7 495 527 21 21</span>
-        <button>Заказать звонок</button>
+        <button className={styles.phoneButton}>ЗАКАЗАТЬ ЗВОНОК</button>
       </div>
     </section>
   );
