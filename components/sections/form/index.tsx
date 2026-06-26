@@ -1,0 +1,69 @@
+"use client";
+import Button from "@/components/ui/button";
+import styles from "./index.module.scss";
+import { useState } from "react";
+
+export default function CallbackForm() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: React.SubmitEvent) => {
+    e.preventDefault();
+    console.log({ name, phone, email });
+  };
+
+  return (
+    <section className={styles.section}>
+      <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <label className={styles.label}>
+          Ваше Имя
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className={styles.input}
+            required
+            name="name"
+          />
+        </label>
+        <label className={styles.label}>
+          Телефон
+          <input
+            type="tel"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className={styles.input}
+            required
+            name="phoneNumber"
+          />
+        </label>
+        <label className={styles.label}>
+          Email
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={styles.input}
+            required
+            name="email"
+          />
+        </label>
+        <p className={styles.notice}>
+          Нажимая на кнопку «Отправить», вы ознакомлены и подтверждаете согласие
+          с{" "}
+          <a className={styles.noticeLink} href="#">
+            политикой обработки персональных данных
+          </a>
+        </p>
+        <Button
+          size="xl"
+          type="submit"
+          className={styles.button}
+          text="ОТПРАВИТЬ"
+        />
+      </form>
+    </section>
+  );
+}

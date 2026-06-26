@@ -2,8 +2,6 @@
   cursor: pointer;
   border: none;
   height: 100%;
-  padding: 15px 20px;
-  border-radius: 20px;
   overflow: hidden;
 
   &:hover {
@@ -20,6 +18,16 @@
   &.text {
     color: var(--secondary);
     background-color: transparent;
+  }
+
+  &.md {
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+  &.xl {
+    padding: 20px 20px;
+    border-radius: 30px;
   }
 }
 

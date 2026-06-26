@@ -1,0 +1,48 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+
+  background-color: transparent;
+}
+
+.notice {
+  font-size: 11px;
+  line-height: 160%;
+  margin-top: 0.5rem;
+  opacity: 50%;
+  text-align: center;
+}
+
+.noticeLink {
+  text-decoration: underline;
+}

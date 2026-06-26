@@ -1,14 +1,19 @@
+import { DetailedHTMLProps, ButtonHTMLAttributes } from "react";
 import styles from "./index.module.scss";
 
-type Props = {
+type Props = DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+> & {
   text: string;
   variant?: "primary" | "seconday" | "text";
+  size?: "xl" | "md";
 };
 
 export default function Button(props: Props) {
-  const { variant = "primary", text } = props;
+  const { variant = "primary", size = "md", text } = props;
   return (
-    <button className={`${styles.button} ${styles[variant]}`}>
+    <button className={`${styles.button} ${styles[variant]} ${styles[size]}`}>
       <div className={styles.textContainer}>
         <p className={styles.innerText}>{text}</p>
         <p className={styles.innerText}>{text}</p>
