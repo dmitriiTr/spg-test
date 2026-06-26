@@ -1,0 +1,144 @@
+.section {
+  display: flex;
+  gap: 200px;
+}
+
+.leftPart {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.aboutText {
+  color: var(--secondary);
+  font-size: 13px;
+  text-align: end;
+}
+
+.aboutImage {
+  position: relative;
+  height: 720px;
+
+  width: 100%;
+  img {
+    object-fit: none;
+    object-position: left 38%;
+  }
+
+  @media (max-width: 1440px) {
+    img {
+      object-fit: none;
+      object-position: 70% top;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    height: 411px;
+    img {
+      object-fit: cover;
+      object-position: right 37%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 488px;
+
+    img {
+      object-fit: cover;
+      object-position: 50% top;
+    }
+  }
+
+  @media (max-width: 360px) {
+    height: 313px;
+  }
+}
+
+.rightPart {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lineContainer {
+  padding: 90px 0 50px;
+}
+
+.line {
+  position: relative;
+  width: 35px;
+  height: 6px;
+}
+
+.aboutDetailsText {
+  font-size: 26px;
+  line-height: 140%;
+}
+
+.apartmentDetails {
+  line-height: 160%;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 90px;
+}
+
+.textAccent {
+  color: var(--secondary);
+}
+
+.videoBlock {
+  padding-top: 85px;
+  display: flex;
+  flex-direction: row;
+  gap: 139px;
+  align-items: center;
+}
+
+.videoText {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.videoLengthText {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.videoPreview {
+  position: relative;
+}
+
+.videoPreviewImage {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 186px;
+  width: 186px;
+}
+
+.videoPlayButton {
+  z-index: 100;
+  height: 24px;
+  width: 48px;
+  position: absolute;
+  top: calc(50% - 24px / 2);
+  left: calc(50% - 48px / 2);
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.videoCircleButton {
+  z-index: 10;
+  position: absolute;
+  top: calc(50% - 142px / 2);
+  left: calc(50% - 142px / 2);
+  width: 142px;
+  height: 142px;
+}
