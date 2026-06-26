@@ -4,12 +4,16 @@ import AboutImage from "@/public/aboutImage.png";
 import VideoPreviewImage from "@/public/videoPreviewImage.png";
 import VideoPlayButtonSvg from "@/public/playButton.svg";
 import VideoPlayCircleSvg from "@/public/videoPlayCircle.svg";
+import AboutImageSvg from "@/public/aboutImageIcon.svg";
 import LineIcon from "@/public/Line.svg";
 
 export default function About() {
   return (
     <section className={styles.section}>
       <div className={styles.leftPart}>
+        <div className={styles.aboutImageIcon}>
+          <Image fill src={AboutImageSvg} alt="aboutSvg" />
+        </div>
         <p className={styles.aboutText}>О ПРОЕКТЕ</p>
         <div className={styles.aboutImage}>
           <Image src={AboutImage} fill alt="first" />
@@ -45,6 +49,7 @@ export default function About() {
               <p className={styles.videoText}>Видео о проекте</p>
               <p className={styles.videoLengthText}>1:25 минут</p>
             </div>
+            <div className={styles.divider} />
             <div className={styles.videoPreview}>
               <div className={styles.videoPlayButton}>
                 <Image fill src={VideoPlayButtonSvg} alt="play" />

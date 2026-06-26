@@ -9,6 +9,16 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
+  position: relative;
+}
+
+.aboutImageIcon {
+  z-index: 10;
+  position: absolute;
+  top: 130px;
+  left: calc(100% - 200px / 2);
+  width: 200px;
+  height: 200px;
 }
 
 .aboutText {
@@ -29,7 +39,7 @@
 
   @media (max-width: 1440px) {
     img {
-      object-fit: none;
+      object-fit: cover;
       object-position: 70% top;
     }
   }
@@ -92,7 +102,7 @@
   padding-top: 85px;
   display: flex;
   flex-direction: row;
-  gap: 139px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -141,4 +151,10 @@
   left: calc(50% - 142px / 2);
   width: 142px;
   height: 142px;
+}
+
+.divider {
+  width: 109px;
+  height: 1px;
+  background-color: #d7d7d7;
 }
