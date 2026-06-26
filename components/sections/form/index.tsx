@@ -1,9 +1,14 @@
 "use client";
 import Button from "@/components/ui/button";
 import styles from "./index.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { IMaskInput } from "react-imask";
 
-export default function CallbackForm() {
+type Props = {
+  closeForm: VoidFunction;
+};
+
+export default function Form({ closeForm }: Props) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -13,8 +18,26 @@ export default function CallbackForm() {
     console.log({ name, phone, email });
   };
 
+  useEffect(() => {
+    const keyDownHandler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeForm();
+      }
+    };
+
+    document.addEventListener("keydown", keyDownHandler);
+
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  });
+
   return (
     <section className={styles.section}>
+      <div style={{ height: "40px" }}>
+        <Button onClick={closeForm} text="Закрыть" />
+      </div>
       <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <label className={styles.label}>
@@ -30,10 +53,12 @@ export default function CallbackForm() {
         </label>
         <label className={styles.label}>
           Телефон
-          <input
+          <IMaskInput
             type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            mask="+{7} (000) 000-00-00"
+            unmask={true}
+            placeholder="+7 (___) ___-__-__"
+            onAccept={(value) => setPhone(value)}
             className={styles.input}
             required
             name="phoneNumber"

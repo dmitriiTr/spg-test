@@ -11,9 +11,12 @@ type Props = DetailedHTMLProps<
 };
 
 export default function Button(props: Props) {
-  const { variant = "primary", size = "md", text } = props;
+  const { variant = "primary", size = "md", text, ...rest } = props;
   return (
-    <button className={`${styles.button} ${styles[variant]} ${styles[size]}`}>
+    <button
+      {...rest}
+      className={`${styles.button} ${styles[variant]} ${styles[size]}`}
+    >
       <div className={styles.textContainer}>
         <p className={styles.innerText}>{text}</p>
         <p className={styles.innerText}>{text}</p>
