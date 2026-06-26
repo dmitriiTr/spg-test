@@ -13,16 +13,24 @@ export default function Form({ closeForm }: Props) {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
 
+  const [closing, setClosing] = useState(false);
+
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     console.log({ name, phone, email });
+  };
+
+  const handleAnimationEnd = () => {
+    if (closing) {
+      closeForm();
+    }
   };
 
   useEffect(() => {
     const keyDownHandler = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.preventDefault();
-        closeForm();
+        setClosing(true);
       }
     };
 
@@ -34,9 +42,12 @@ export default function Form({ closeForm }: Props) {
   });
 
   return (
-    <section className={styles.section}>
+    <section
+      onAnimationEnd={handleAnimationEnd}
+      className={`${styles.section} ${closing ? styles.closing : ""}`}
+    >
       <div style={{ height: "40px" }}>
-        <Button onClick={closeForm} text="Закрыть" />
+        <Button onClick={() => setClosing(true)} text="Закрыть" />
       </div>
       <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
       <form className={styles.form} onSubmit={handleSubmit}>

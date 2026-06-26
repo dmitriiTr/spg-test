@@ -10,7 +10,7 @@ import { createPortal } from "react-dom";
 
 export default function Menu() {
   const [formOpen, setformOpen] = useState(false);
-  console.log(formOpen);
+
   return (
     <section className={styles.headerMenu}>
       <div className={styles.headerActions}>
