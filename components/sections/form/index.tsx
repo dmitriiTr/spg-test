@@ -47,7 +47,7 @@ export default function Form({ closeForm }: Props) {
       className={`${styles.section} ${closing ? styles.closing : ""}`}
     >
       <div style={{ height: "40px" }}>
-        <Button onClick={() => setClosing(true)} text="Закрыть" />
+        <Button onClick={() => setClosing(true)}>Закрыть</Button>
       </div>
       <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -93,12 +93,9 @@ export default function Form({ closeForm }: Props) {
             политикой обработки персональных данных
           </a>
         </p>
-        <Button
-          size="xl"
-          type="submit"
-          className={styles.button}
-          text="ОТПРАВИТЬ"
-        />
+        <Button size="xl" type="submit" className={styles.button}>
+          ОТПРАВИТЬ
+        </Button>
       </form>
     </section>
   );

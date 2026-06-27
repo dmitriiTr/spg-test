@@ -5,7 +5,7 @@
   overflow: hidden;
 
   &:hover {
-    .innerText {
+    .innerContent {
       transform: translateY(-100%);
     }
   }
@@ -31,12 +31,12 @@
   }
 }
 
-.textContainer {
+.container {
   height: 13px;
   overflow: hidden;
 }
 
-.innerText {
+.innerContent {
   transition: transform 0.3s ease;
   height: 13px;
   line-height: 13px;

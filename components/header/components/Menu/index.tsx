@@ -20,18 +20,16 @@ export default function Menu() {
           </div>
           <span>МЕНЮ</span>
         </div>
-        <Button text="ВЫБРАТЬ КВАРТИРУ" />
+        <Button>ВЫБРАТЬ КВАРТИРУ</Button>
       </div>
       <div className={styles.logo}>
         <Image src={LogoIcon} fill priority alt={"Logo"} />
       </div>
       <div className={styles.phoneMenu}>
         <span>+7 495 527 21 21</span>
-        <Button
-          variant="text"
-          text="ЗАКАЗАТЬ ЗВОНОК"
-          onClick={() => setformOpen(true)}
-        />
+        <Button variant="text" onClick={() => setformOpen(true)}>
+          ЗАКАЗАТЬ ЗВОНОК
+        </Button>
       </div>
       {formOpen &&
         createPortal(
