@@ -7,6 +7,13 @@ import Button from "@/components/ui/button";
 import Form from "@/components/sections/form";
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import Select from "@/components/ui/select";
+
+const options = [
+  { value: "Квартира 1", label: "Квартира 1" },
+  { value: "Квартира 2", label: "Квартира 2" },
+  { value: "Квартира 3", label: "Квартира 3" },
+];
 
 export default function Menu() {
   const [formOpen, setformOpen] = useState(false);
@@ -20,7 +27,7 @@ export default function Menu() {
           </div>
           <span>МЕНЮ</span>
         </div>
-        <Button>ВЫБРАТЬ КВАРТИРУ</Button>
+        <Select options={options} placeholder="ВЫБРАТЬ КВАРТИРУ" />
       </div>
       <div className={styles.logo}>
         <Image src={LogoIcon} fill priority alt={"Logo"} />

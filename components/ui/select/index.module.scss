@@ -1,0 +1,23 @@
+.container {
+  height: 100%;
+}
+
+.control {
+  background-color: var(--secondary) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 20px !important;
+  height: 100%;
+}
+
+.placeholder,
+.singleValue {
+  color: white !important;
+  padding-left: 15px;
+}
+
+.indicatorContainer {
+  div {
+    color: white !important;
+  }
+}

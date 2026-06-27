@@ -1,0 +1,22 @@
+.container {
+  overflow: hidden;
+  height: 13px;
+}
+
+.content {
+  transition: 0.3s;
+  line-height: 13px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.container:hover {
+  .content {
+    transition: 0.3s;
+    transform: translateY(-100%);
+  }
+  .content {
+    transition: 0.3s;
+    transform: translateY(-100%);
+  }
+}

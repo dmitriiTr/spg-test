@@ -1,5 +1,6 @@
 import { DetailedHTMLProps, ButtonHTMLAttributes } from "react";
 import styles from "./index.module.scss";
+import AnimatedContent from "../animatedContent";
 
 type Props = DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -16,10 +17,7 @@ export default function Button(props: Props) {
       {...rest}
       className={`${styles.button} ${styles[variant]} ${styles[size]}`}
     >
-      <div className={styles.container}>
-        <div className={styles.innerContent}>{children}</div>
-        <div className={styles.innerContent}>{children}</div>
-      </div>
+      <AnimatedContent>{children}</AnimatedContent>
     </button>
   );
 }
