@@ -23,7 +23,7 @@ export default function About() {
             <Image src={LineIcon} fill priority alt={"Line"} />
           </div>
         </div>
-        <div>
+        <div className={styles.textContainer}>
           <p className={styles.aboutDetailsText}>
             УЮТНОЕ И БЕЗОПАСНОЕ <br />
             ПРОСТРАНСТВО ДЛЯ СЧАСТЛИВОЙ <br />
@@ -41,15 +41,15 @@ export default function About() {
             балконами, лоджиями и террасами В собственной <br />
             закрытой охраняемой территориИ.
           </p>
+        </div>
 
-          <div className={styles.videoBlock}>
-            <div>
-              <p className={styles.videoText}>Видео о проекте</p>
-              <p className={styles.videoLengthText}>1:25 минут</p>
-            </div>
-            <div className={styles.divider} />
-            <VideoWidget />
+        <div className={styles.videoBlock}>
+          <div>
+            <p className={styles.videoText}>Видео о проекте</p>
+            <p className={styles.videoLengthText}>1:25 минут</p>
           </div>
+          <div className={styles.divider} />
+          <VideoWidget />
         </div>
       </div>
     </section>
