@@ -1,11 +1,9 @@
 import Image from "next/image";
 import styles from "./index.module.scss";
 import AboutImage from "@/public/aboutImage.png";
-import VideoPreviewImage from "@/public/videoPreviewImage.png";
-import VideoPlayButtonSvg from "@/public/playButton.svg";
-import VideoPlayCircleSvg from "@/public/videoPlayCircle.svg";
 import AboutImageSvg from "@/public/aboutImageIcon.svg";
 import LineIcon from "@/public/Line.svg";
+import VideoWidget from "@/components/videoWidget";
 
 export default function About() {
   return (
@@ -50,17 +48,7 @@ export default function About() {
               <p className={styles.videoLengthText}>1:25 минут</p>
             </div>
             <div className={styles.divider} />
-            <div className={styles.videoPreview}>
-              <div className={styles.videoPlayButton}>
-                <Image fill src={VideoPlayButtonSvg} alt="play" />
-              </div>
-              <div className={styles.videoCircleButton}>
-                <Image fill src={VideoPlayCircleSvg} alt="playCircle" />
-              </div>
-              <div className={styles.videoPreviewImage}>
-                <Image fill src={VideoPreviewImage} alt="preview" />
-              </div>
-            </div>
+            <VideoWidget />
           </div>
         </div>
       </div>
