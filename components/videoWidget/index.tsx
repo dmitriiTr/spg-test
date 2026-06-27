@@ -1,14 +1,28 @@
 "use client";
-import { createPortal } from "react-dom";
 import Image from "next/image";
 import VideoPreviewImage from "@/public/videoPreviewImage.png";
 import VideoPlayButtonSvg from "@/public/playButton.svg";
 import VideoPlayCircleSvg from "@/public/videoPlayCircle.svg";
 import styles from "./index.module.scss";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default function VideoWidget() {
   const ref = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement && ref.current) {
+        ref.current.pause();
+        ref.current.currentTime = 0;
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
 
   return (
     <>
@@ -30,33 +44,31 @@ export default function VideoWidget() {
           <Image fill src={VideoPreviewImage} alt="preview" />
         </div>
       </div>
-      {createPortal(
-        <video
-          ref={ref}
-          onPlay={() => {
-            if (!ref.current) {
-              return;
-            }
-            if (ref.current.requestFullscreen) {
-              ref.current.requestFullscreen();
-            }
-            // else if (ref.current["webkitRequestFullscreen"]) {
-            //   /* Safari */
-            //   ref.current["webkitRequestFullscreen"]?.call();
-            // } else if (ref.current.msRequestFullscreen) {
-            //   /* IE11 */
-            //   ref.current.msRequestFullscreen();
-            // }
-          }}
-          className={styles.videoPlayer}
-          controls
-          preload="none"
-        >
-          <source src="/forestFootage.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>,
-        document.body,
-      )}
+      <video
+        ref={ref}
+        onPlay={() => {
+          if (!ref.current) {
+            return;
+          }
+          if (ref.current.requestFullscreen) {
+            ref.current.requestFullscreen();
+            // @ts-expect-error: safari api
+          } else if (ref.current["webkitRequestFullscreen"]) {
+            // @ts-expect-error: safari api
+            ref.current["webkitRequestFullscreen"]?.call();
+            // @ts-expect-error: ie api
+          } else if (ref.current["msRequestFullscreen"]) {
+            // @ts-expect-error: ie api
+            ref.current.msRequestFullscreen?.call();
+          }
+        }}
+        className={styles.videoPlayer}
+        controls
+        preload="none"
+      >
+        <source src="/forestFootage.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </>
   );
 }
