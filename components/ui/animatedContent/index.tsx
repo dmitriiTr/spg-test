@@ -3,7 +3,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function AnimatedText({ children }: Props) {
+export default function AnimatedContent({ children }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.content}>{children}</div>
