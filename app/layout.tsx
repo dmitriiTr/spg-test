@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import SmoothScrollbarProvider from "@/components/scrollbarProvider";
 
 export const metadata: Metadata = {
   title: "INCHAPIN",
@@ -14,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <SmoothScrollbarProvider>{children}</SmoothScrollbarProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
