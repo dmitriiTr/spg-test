@@ -1,0 +1,55 @@
+.field {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 28px 15px 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+.label {
+  position: absolute;
+  left: 4px;
+  top: 70%;
+  transform: translateY(-50%);
+  transform-origin: left top;
+
+  pointer-events: none;
+
+  font-size: 16px;
+  color: #222;
+
+  text-transform: uppercase;
+
+  transition:
+    transform 0.25s ease,
+    top 0.25s ease,
+    font-size 0.25s ease,
+    color 0.25s ease;
+}
+
+.input:not(:focus) {
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.input:focus + .label {
+  top: 10px;
+  transform: translateY(0);
+  font-size: 12px;
+  color: #222;
+}
+
+.input:not(:placeholder-shown) + .label {
+  top: 10px;
+  transform: translateY(0);
+  font-size: 12px;
+  color: #222;
+}

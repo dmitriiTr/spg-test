@@ -2,7 +2,8 @@
 import Button from "@/components/ui/button";
 import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
-import { IMaskInput } from "react-imask";
+import Input from "@/components/ui/input";
+import MaskedInput from "@/components/ui/maskedInput";
 
 type Props = {
   closeForm: VoidFunction;
@@ -51,41 +52,31 @@ export default function Form({ closeForm }: Props) {
       </div>
       <h2>ЗАКАЗАТЬ ЗВОНОК</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <label className={styles.label}>
-          Ваше Имя
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className={styles.input}
-            required
-            name="name"
-          />
-        </label>
-        <label className={styles.label}>
-          Телефон
-          <IMaskInput
-            type="tel"
-            mask="+{7} (000) 000-00-00"
-            unmask={true}
-            placeholder="+7 (___) ___-__-__"
-            onAccept={(value) => setPhone(value)}
-            className={styles.input}
-            required
-            name="phoneNumber"
-          />
-        </label>
-        <label className={styles.label}>
-          Email
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={styles.input}
-            required
-            name="email"
-          />
-        </label>
+        <Input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          name="name"
+          label="Ваше Имя"
+        ></Input>
+        <MaskedInput
+          label="Телефон"
+          type="tel"
+          mask="+{7} (000) 000-00-00"
+          placeholder="+7 (___) ___-__-__"
+          onAccept={(value) => setPhone(value)}
+          required
+          name="phoneNumber"
+        />
+        <Input
+          label="Email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          name="email"
+        />
         <p className={styles.notice}>
           Нажимая на кнопку «Отправить», вы ознакомлены и подтверждаете согласие
           с{" "}
