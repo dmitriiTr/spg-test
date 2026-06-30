@@ -1,6 +1,14 @@
+.heroSection {
+  min-height: 100vh;
+
+  @supports (height: 100dvh) {
+    min-height: 100dvh;
+  }
+}
+
 .heroImage {
   position: relative;
-  height: 600px;
+  height: calc(100dvh - var(--headerHeight) - var(--heroInfoHeight));
 
   width: 100%;
   img {
@@ -9,7 +17,6 @@
   }
 
   @media (max-width: 1440px) {
-    height: 506px;
     img {
       object-fit: none;
       object-position: right 44%;
@@ -39,7 +46,9 @@
 }
 
 .pageContent {
-  padding: 40px 0px 110px;
+  padding-bottom: 10px;
+  align-items: end;
+  height: var(--heroInfoHeight);
   display: flex;
   justify-content: space-between;
 }

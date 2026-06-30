@@ -8,6 +8,9 @@
   color: white !important;
   border-radius: 20px !important;
   height: 100%;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .placeholder,

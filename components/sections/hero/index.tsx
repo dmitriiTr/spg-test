@@ -5,7 +5,7 @@ import BigLogoIcon from "@/public/logo2.svg";
 
 export default function Hero() {
   return (
-    <section>
+    <section className={styles.heroSection}>
       <div className={styles.heroImage}>
         <Image src={HeroImage} fill alt="first" />
       </div>
