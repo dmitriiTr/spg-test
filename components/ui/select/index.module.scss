@@ -6,8 +6,8 @@
   background-color: var(--secondary) !important;
   border: none !important;
   color: white !important;
-  border-radius: 20px !important;
-  height: 100%;
+  border-radius: calc(var(--buttonHeight) / 2) !important;
+  height: var(--buttonHeight);
   &:hover {
     cursor: pointer;
   }

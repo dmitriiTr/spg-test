@@ -27,16 +27,19 @@ export default function Menu() {
           </div>
           <span>МЕНЮ</span>
         </div>
-        <Select options={options} placeholder="ВЫБРАТЬ КВАРТИРУ" />
+        <div className={styles.selectContainerLg}>
+          <Select options={options} placeholder="ВЫБРАТЬ КВАРТИРУ" />
+        </div>
       </div>
       <div className={styles.logo}>
         <Image src={LogoIcon} fill priority alt={"Logo"} />
       </div>
+      <div className={styles.selectContainerSm}>
+        <Select options={options} placeholder="ВЫБРАТЬ КВАРТИРУ" />
+      </div>
       <div className={styles.phoneMenu}>
-        <span>+7 495 527 21 21</span>
-        <Button variant="text" onClick={() => setformOpen(true)}>
-          ЗАКАЗАТЬ ЗВОНОК
-        </Button>
+        <span className={styles.phoneNumber}>+7 495 527 21 21</span>
+        <Button onClick={() => setformOpen(true)}>ЗАКАЗАТЬ ЗВОНОК</Button>
       </div>
       {formOpen &&
         createPortal(

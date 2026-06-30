@@ -1,4 +1,5 @@
 .heroSection {
+  padding: 0px var(--pageSpacing);
   min-height: 100vh;
 
   @supports (height: 100dvh) {
@@ -47,25 +48,40 @@
 
 .pageContent {
   padding-bottom: 10px;
+  padding-top: 30px;
   align-items: end;
   height: var(--heroInfoHeight);
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .logo {
   position: relative;
-  width: 188px;
-  height: 31px;
+  width: 862px;
+  height: 137px;
 
   @media (max-width: 1440px) {
     width: 717px;
     height: 114px;
   }
 
+  @media (max-width: 1440px) {
+    width: 553px;
+    height: 88px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 109px;
+  }
+
   @media (max-width: 360px) {
-    width: 130px;
-    height: 21px;
+    width: 100%;
+    height: 50px;
   }
 }
 
@@ -73,5 +89,5 @@
   line-height: 140%;
   align-content: end;
   color: var(--secondary);
-  font-size: 31px;
+  font-size: var(--heroTextFontSize);
 }

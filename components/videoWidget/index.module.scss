@@ -1,13 +1,26 @@
 .videoPreview {
   position: relative;
+
+  --videoPreviewSize: 241px;
+  --playCircleSize: 142px;
+
+  @media (max-width: 1440px) {
+    --videoPreviewSize: 186px;
+    --playCircleSize: 110px;
+  }
+
+  @media (max-width: 1024px) {
+    --videoPreviewSize: 133px;
+    --playCircleSize: 79px;
+  }
 }
 
 .videoPreviewImage {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  height: 186px;
-  width: 186px;
+  height: var(--videoPreviewSize);
+  width: var(--videoPreviewSize);
 }
 
 .videoPlayButton {
@@ -28,10 +41,10 @@
 .videoCircleButton {
   z-index: 10;
   position: absolute;
-  top: calc(50% - 142px / 2);
-  left: calc(50% - 142px / 2);
-  width: 142px;
-  height: 142px;
+  top: calc(50% - var(--playCircleSize) / 2);
+  left: calc(50% - var(--playCircleSize) / 2);
+  width: var(--playCircleSize);
+  height: var(--playCircleSize);
 }
 
 .videoPlayer {

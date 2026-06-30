@@ -23,33 +23,35 @@ export default function About() {
             <Image src={LineIcon} fill priority alt={"Line"} />
           </div>
         </div>
-        <div className={styles.textContainer}>
-          <p className={styles.aboutDetailsText}>
-            УЮТНОЕ И БЕЗОПАСНОЕ <br />
-            ПРОСТРАНСТВО ДЛЯ СЧАСТЛИВОЙ <br />
-            <span className={styles.textAccent}>
-              СПОКОЙНОЙ И РАЗМЕРЕННОЙ <br />
-              ЖИЗНИ
-            </span>
-          </p>
+        <div className={styles.content}>
+          <div className={styles.textContainer}>
+            <p className={styles.aboutDetailsText}>
+              УЮТНОЕ И БЕЗОПАСНОЕ <br />
+              ПРОСТРАНСТВО ДЛЯ СЧАСТЛИВОЙ <br />
+              <span className={styles.textAccent}>
+                СПОКОЙНОЙ И РАЗМЕРЕННОЙ <br />
+                ЖИЗНИ
+              </span>
+            </p>
 
-          <p className={styles.apartmentDetails}>
-            <span className={styles.textAccent}>
-              Квартиры от 65 до 356 м2 с чистовой отделкой,
-            </span>{" "}
-            <br />
-            балконами, лоджиями и террасами В собственной <br />
-            закрытой охраняемой территориИ.
-          </p>
-        </div>
-
-        <div className={styles.videoBlock}>
-          <div>
-            <p className={styles.videoText}>Видео о проекте</p>
-            <p className={styles.videoLengthText}>1:25 минут</p>
+            <p className={styles.apartmentDetails}>
+              <span className={styles.textAccent}>
+                Квартиры от 65 до 356 м2 с чистовой отделкой,
+              </span>{" "}
+              <br />
+              балконами, лоджиями и террасами В собственной <br />
+              закрытой охраняемой территориИ.
+            </p>
           </div>
-          <div className={styles.divider} />
-          <VideoWidget />
+
+          <div className={styles.videoBlock}>
+            <div>
+              <p className={styles.videoText}>Видео о проекте</p>
+              <p className={styles.videoLengthText}>1:25 минут</p>
+            </div>
+            <div className={styles.divider} />
+            <VideoWidget />
+          </div>
         </div>
       </div>
     </section>

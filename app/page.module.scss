@@ -6,23 +6,6 @@
   justify-content: center;
   font-family: "Proxima Nova";
   background-color: var(--background);
-  padding: 0px 80px;
-
-  @media (max-width: 1440px) {
-    padding: 0px 40px;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 0px 30px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0px 40px;
-  }
-
-  @media (max-width: 360px) {
-    padding: 0px 20px;
-  }
 }
 
 .main {
@@ -104,22 +87,6 @@ a.secondary {
   a.secondary:hover {
     background: var(--button-secondary-hover);
     border-color: transparent;
-  }
-}
-
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
   }
 }
 

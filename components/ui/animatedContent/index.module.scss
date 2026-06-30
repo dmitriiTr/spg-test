@@ -1,12 +1,12 @@
 .container {
   overflow: hidden;
-  height: 13px;
+  height: var(--buttonFontSize);
 }
 
 .content {
   transition: 0.3s;
-  line-height: 13px;
-  font-size: 13px;
+  line-height: var(--buttonFontSize);
+  font-size: var(--buttonFontSize);
   text-transform: uppercase;
 }
 

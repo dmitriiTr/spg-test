@@ -1,10 +1,46 @@
 .section {
   display: flex;
-  gap: 200px;
+
+  --iconSize: 259px;
+  --partSpacing: 226px;
+
+  @media (max-width: 1440px) {
+    --iconSize: 200px;
+    --partSpacing: 150px;
+  }
+
+  @media (max-width: 1024px) {
+    --iconSize: 148px;
+    --partSpacing: 148px;
+  }
+
+  @media (max-width: 768px) {
+    --iconSize: 81px;
+    --partSpacing: 94px;
+  }
+
+  @media (min-width: 361px) {
+    gap: var(--partSpacing);
+  }
+
+  @media (max-width: 360px) {
+    flex-direction: column;
+  }
+
+  padding-bottom: var(--pageSpacing);
 }
 
 .leftPart {
   width: 50%;
+
+  @media (min-width: 769px) {
+    padding-left: var(--pageSpacing);
+  }
+
+  @media (max-width: 360px) {
+    width: 80%;
+  }
+
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -15,20 +51,20 @@
   z-index: 10;
   position: absolute;
   top: 130px;
-  left: calc(100% - 200px / 2);
-  width: 200px;
-  height: 200px;
+  left: calc(100% - var(--iconSize) / 2);
+  width: var(--iconSize);
+  height: var(--iconSize);
 }
 
 .aboutText {
   color: var(--secondary);
-  font-size: 13px;
+  font-size: var(--aboutTextFontSize);
   text-align: end;
 }
 
 .aboutImage {
   position: relative;
-  height: 720px;
+  height: 900px;
 
   width: 100%;
   img {
@@ -37,22 +73,23 @@
   }
 
   @media (max-width: 1440px) {
+    height: 720px;
     img {
       object-fit: cover;
-      object-position: 70% top;
+      object-position: 50% top;
     }
   }
 
   @media (max-width: 1024px) {
-    height: 411px;
+    height: 514px;
     img {
       object-fit: cover;
-      object-position: right 37%;
+      object-position: 50% 37%;
     }
   }
 
   @media (max-width: 768px) {
-    height: 488px;
+    height: 408px;
 
     img {
       object-fit: cover;
@@ -61,7 +98,7 @@
   }
 
   @media (max-width: 360px) {
-    height: 313px;
+    height: 410px;
   }
 }
 
@@ -69,10 +106,16 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding-right: var(--pageSpacing);
+
+  @media (max-width: 360px) {
+    padding-left: var(--pageSpacing);
+    width: 100%;
+  }
 }
 
 .lineContainer {
-  padding: 90px 0 50px;
+  padding: 18% 0 10%;
 }
 
 .line {
@@ -81,21 +124,45 @@
   height: 6px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 740px;
+
+  @media (max-width: 1440px) {
+    height: 620px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 412px;
+  }
+
+  @media (max-width: 768px) {
+    height: 350px;
+  }
+}
+
 .textContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 345px;
+
+  @media (max-width: 1024px) {
+    height: 220px;
+  }
 }
 
 .aboutDetailsText {
-  font-size: 26px;
+  font-size: var(--aboutDetailsFontSize);
   line-height: 140%;
 }
 
 .apartmentDetails {
   line-height: 160%;
-  font-size: 16px;
+  font-size: var(--apartmentDetailsFontSize);
+  font-weight: lighter;
   text-transform: uppercase;
 }
 
@@ -104,7 +171,6 @@
 }
 
 .videoBlock {
-  padding-top: 85px;
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -112,13 +178,13 @@
 }
 
 .videoText {
-  font-size: 14px;
+  font-size: var(--videoTextFontSize);
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .videoLengthText {
-  font-size: 14px;
+  font-size: var(--videoTextFontSize);
   opacity: 0.5;
 }
 

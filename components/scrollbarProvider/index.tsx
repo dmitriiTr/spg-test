@@ -24,7 +24,7 @@ export default function SmoothScrollbarProvider({ children }: Props) {
     <div
       ref={containerRef}
       style={{
-        height: "calc(100vh - 100px)",
+        height: "calc(100vh - var(--headerHeight))",
       }}
     >
       {children}

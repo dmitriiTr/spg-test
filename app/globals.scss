@@ -5,8 +5,70 @@
   --primary: #000;
   --secondary: #2f80ed;
 
-  --headerHeight: 100px;
+  --pageSpacing: 80px;
+  --headerHeight: 130px;
   --heroInfoHeight: 200px;
+
+  --buttonFontSize: 15px;
+  --buttonHeight: 51px;
+
+  --phoneFontSize: 17px;
+  --heroTextFontSize: 31px;
+  --aboutTextFontSize: 17px;
+  --aboutDetailsFontSize: 34px;
+  --apartmentDetailsFontSize: 20px;
+  --videoTextFontSize: 18px;
+
+  @media (max-width: 1440px) {
+    --pageSpacing: 40px;
+    --headerHeight: 100px;
+
+    --buttonFontSize: 13px;
+    --buttonHeight: 43px;
+
+    --phoneFontSize: 14px;
+    --heroTextFontSize: 26px;
+    --aboutTextFontSize: 13px;
+    --aboutDetailsFontSize: 26px;
+    --apartmentDetailsFontSize: 18px;
+    --videoTextFontSize: 14px;
+  }
+
+  @media (max-width: 1024px) {
+    --pageSpacing: 30px;
+    --headerHeight: 103px;
+
+    --buttonFontSize: 12px;
+
+    --phoneFontSize: 13px;
+    --heroTextFontSize: 19px;
+    --aboutTextFontSize: 11px;
+    --aboutDetailsFontSize: 19px;
+    --apartmentDetailsFontSize: 12px;
+    --videoTextFontSize: 10px;
+  }
+
+  @media (max-width: 768px) {
+    --pageSpacing: 40px;
+    --headerHeight: 123px;
+    --heroInfoHeight: 250px;
+
+    --buttonFontSize: 12px;
+    --heroTextFontSize: 26px;
+    --aboutDetailsFontSize: 19px;
+    --apartmentDetailsFontSize: 12px;
+  }
+
+  @media (max-width: 360px) {
+    --pageSpacing: 20px;
+    --headerHeight: 81px;
+    --heroInfoHeight: 200px;
+
+    --buttonFontSize: 12px;
+    --heroTextFontSize: 13px;
+    --aboutDetailsFontSize: 16px;
+    --apartmentDetailsFontSize: 11px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

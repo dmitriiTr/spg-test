@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   flex: 1;
-  height: 43px;
   align-items: center;
   z-index: 100;
 }
@@ -20,6 +19,12 @@
   gap: 16px;
   cursor: pointer;
 
+  @media (max-width: 768px) {
+    span {
+      display: none;
+    }
+  }
+
   &:hover {
     .menuIcon {
       transform: scaleY(120%);
@@ -28,6 +33,7 @@
 }
 
 .menuIcon {
+  font-size: var(--buttonFontSize);
   position: relative;
   width: 38px;
   height: 17px;
@@ -59,4 +65,30 @@
   display: flex;
   gap: 16px;
   align-items: center;
+}
+
+.phoneNumber {
+  font-size: var(--phoneFontSize);
+  font-weight: 700;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.selectContainerLg {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.selectContainerSm {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  @media (max-width: 360px) {
+    display: none;
+  }
 }
