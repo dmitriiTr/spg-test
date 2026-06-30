@@ -67,6 +67,8 @@
 }
 
 .heading {
+  font-weight: normal;
+
   padding-bottom: 52px;
   font-size: 52px;
 
@@ -75,7 +77,20 @@
     font-size: 40px;
   }
 
-  font-weight: normal;
+  @media (max-width: 1024px) {
+    padding-bottom: 28px;
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 28px;
+    font-size: 28px;
+  }
+
+  @media (max-width: 368px) {
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
 }
 
 .label {
