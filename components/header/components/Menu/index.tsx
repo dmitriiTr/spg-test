@@ -43,7 +43,9 @@ export default function Menu() {
       </div>
       <div className={styles.phoneMenu}>
         <span className={styles.phoneNumber}>+7 495 527 21 21</span>
-        <Button onClick={() => setformOpen(true)}>ЗАКАЗАТЬ ЗВОНОК</Button>
+        <Button variant="text" onClick={() => setformOpen(true)}>
+          ЗАКАЗАТЬ ЗВОНОК
+        </Button>
       </div>
       <div className={styles.phoneMenuSm}>
         <PhoneButton onClick={() => setformOpen(true)} />

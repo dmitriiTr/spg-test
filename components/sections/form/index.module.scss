@@ -57,14 +57,24 @@
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.8rem;
-  width: 100%;
-  max-width: 400px;
+  max-width: 587px;
+
+  @media (max-width: 1440px) {
+    max-width: 400px;
+  }
 }
 
 .heading {
-  padding-bottom: 20px;
-  font-size: 40px;
+  padding-bottom: 52px;
+  font-size: 52px;
+
+  @media (max-width: 1440px) {
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+
   font-weight: normal;
 }
 
@@ -84,7 +94,11 @@
 }
 
 .notice {
-  font-size: 11px;
+  font-size: 14px;
+  @media (max-width: 1440px) {
+    font-size: 11px;
+  }
+
   line-height: 160%;
   margin-top: 20px;
   opacity: 50%;

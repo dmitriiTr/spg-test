@@ -1,16 +1,34 @@
 .field {
   position: relative;
   width: 100%;
+
+  --text-size: 17px;
+
+  @media (max-width: 1440px) {
+    --text-size: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    --text-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    --text-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    --text-size: 11px;
+  }
 }
 
 .input {
   width: 100%;
   padding: 28px 15px 10px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
   background: transparent;
-  font-size: 16px;
   outline: none;
+  font-size: var(--text-size);
 }
 
 .label {
@@ -21,8 +39,7 @@
   transform-origin: left top;
 
   pointer-events: none;
-
-  font-size: 16px;
+  font-size: var(--text-size);
   color: #222;
 
   text-transform: uppercase;

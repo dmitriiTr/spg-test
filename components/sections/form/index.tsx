@@ -81,7 +81,7 @@ export default function Form({ closeForm }: Props) {
             name="email"
           />
           <p className={styles.notice}>
-            Нажимая на кнопку «Отправить», вы ознакомлены и подтверждаете
+            Нажимая на кнопку «Отправить», вы ознакомлены <br /> и подтверждаете
             согласие с{" "}
             <a className={styles.noticeLink} href="#">
               политикой обработки персональных данных
