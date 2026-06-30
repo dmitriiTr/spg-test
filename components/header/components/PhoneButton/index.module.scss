@@ -1,0 +1,22 @@
+.phoneButton {
+  width: 41px;
+  height: 41px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .phoneImage {
+      transform: scale(120%);
+    }
+  }
+}
+
+.phoneImage {
+  transition: 0.3s;
+  width: 14px;
+  height: 14px;
+}

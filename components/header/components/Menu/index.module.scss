@@ -65,6 +65,28 @@
   display: flex;
   gap: 16px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.phoneMenuSm {
+  @media (min-width: 361px) {
+    display: none;
+  }
+}
+
+.phoneMenuSmLeft {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  @media (max-width: 360px) {
+    display: none;
+  }
 }
 
 .phoneNumber {

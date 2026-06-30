@@ -8,6 +8,7 @@ import Form from "@/components/sections/form";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import Select from "@/components/ui/select";
+import { PhoneButton } from "../PhoneButton";
 
 const options = [
   { value: "Квартира 1", label: "Квартира 1" },
@@ -31,6 +32,9 @@ export default function Menu() {
           <Select options={options} placeholder="ВЫБРАТЬ КВАРТИРУ" />
         </div>
       </div>
+      <div className={styles.phoneMenuSmLeft}>
+        <PhoneButton onClick={() => setformOpen(true)} />
+      </div>
       <div className={styles.logo}>
         <Image src={LogoIcon} fill priority alt={"Logo"} />
       </div>
@@ -40,6 +44,9 @@ export default function Menu() {
       <div className={styles.phoneMenu}>
         <span className={styles.phoneNumber}>+7 495 527 21 21</span>
         <Button onClick={() => setformOpen(true)}>ЗАКАЗАТЬ ЗВОНОК</Button>
+      </div>
+      <div className={styles.phoneMenuSm}>
+        <PhoneButton onClick={() => setformOpen(true)} />
       </div>
       {formOpen &&
         createPortal(
