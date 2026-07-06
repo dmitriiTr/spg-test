@@ -13,13 +13,13 @@
 
   width: 100%;
   img {
-    object-fit: none;
+    object-fit: cover;
     object-position: left 38%;
   }
 
   @media (max-width: 1440px) {
     img {
-      object-fit: none;
+      object-fit: cover;
       object-position: right 44%;
     }
   }

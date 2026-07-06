@@ -17,6 +17,7 @@ export default function Select(props: Props<Options, false>) {
   return (
     <SelectInput
       {...props}
+      instanceId="uniqueId"
       components={{
         SingleValue: (props: SingleValueProps<Options>) => (
           <components.SingleValue {...props}>
